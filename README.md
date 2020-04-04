@@ -12,6 +12,7 @@ In order to get MiningCalc set up for your cryptocurrency, simply set the below 
 ```
 coin - The name of your cryptocurrency (ex. Bitcoin)
 symbol - The symbol for your cryptocurrency (ex. BTC)
+decimalPlaces - How many decimal places you want the final output to be
 getBlockReward - Function that returns the current block reward (see template.js for examples)
 getDifficulty - Function that returns the current network difficulty (see template.js for examples)
 getExchangeRate - Function that returns the current coin to BTC exchange rate (see template.js for examples)
