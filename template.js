@@ -25,7 +25,6 @@ function getExchangeRate(){
     return customFetch('http://profit.scpool.xyz/ticker',true)
         .then((data) => {
             let willowStats = data.filter((x) => {return x.pair == 'BTC_WILLOW'})[0];
-            console.log(Number(willowStats.high24hr) + Number(willowStats.low24hr));
             return ((Number(willowStats.high24hr) + Number(willowStats.low24hr))/2).toFixed(9);
         });
 }
