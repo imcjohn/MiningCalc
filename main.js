@@ -1,9 +1,6 @@
 function getExchangeRate(){
     // load current btc exchange rate, useful to have
-    return fetch('https://blockchain.info/tobtc?currency=USD&value=1&cors=true')
-        .then((response) => {
-            return response.text();
-        })
+    return customFetch('https://blockchain.info/tobtc?currency=USD&value=1&cors=true',false)
         .then((data) => {
             template.btcUSD = 1/data;
         });

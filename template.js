@@ -1,4 +1,5 @@
 // Example template for WillowCoin (https://bitcointalk.org/index.php?topic=5234309.0)
+// Data is from my mining pool at http://scpool.xyz
 
 /**
  * Returns a promise of a Number representing the coin's current difficulty
@@ -8,10 +9,7 @@ function getDifficulty(){
 
     // Usually I'd say use an api, don't scrape a pool
     // But I own this pool so I am fine scraping it
-    return fetch('http://profit.scpool.xyz/explor')
-        .then((response) => {
-            return response.text();
-        })
+    return customFetch('http://profit.scpool.xyz/explor',false)
         .then((data) => {
             return data.split('id="DIFF WILLOW" data="')[1].split('"')[0];
         });
@@ -24,10 +22,7 @@ function getDifficulty(){
 function getExchangeRate(){
 
     // Willow currently only trades on erex, so getting data from there
-    return fetch('http://profit.scpool.xyz/ticker')
-        .then((response) => {
-            return response.json();
-        })
+    return customFetch('http://profit.scpool.xyz/ticker',true)
         .then((data) => {
             let willowStats = data.filter((x) => {return x.pair == 'BTC_WILLOW'})[0];
             console.log(Number(willowStats.high24hr) + Number(willowStats.low24hr));
