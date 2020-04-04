@@ -24,5 +24,6 @@ configure for new altcoin creators, pool operators, or anyone else who needs a s
 calculator. Messages and pull requests are always appreciated if you have any suggestions, and 
 if this project helps you out, feel free to toss me some BTC at 1H63qcrbSBpdxLgHvzVVKVMGKQJqiZHdiK . In addition, this 
 project wouldn't have been possible without an excellent CodePen [template](https://codepen.io/ehermanson/pen/KwKWEv)
- from ehermanson, so definitely check that out!
+ from ehermanson, so definitely check that out! Also, while this does have ads in it, you are welcome to remove them in 
+ the HTML if you really have to, but I appreciate the revenue for anyone who keeps em in
 
