@@ -28,8 +28,7 @@ function doCalc(){
     }
     catch {}
     let cost = 0.001 * decoded.powerCost * decoded.powerUse;
-    console.log(cost);
-    let hour = (1 - template.poolFee) * decoded.hashRate * 1000000 * 3600 * decoded.BlockReward / (2**32 * decoded.Difficulty);
+    let hour = (1 - decoded.poolFee) * decoded.hashRate * 1000000 * 3600 * decoded.BlockReward / (2**32 * decoded.Difficulty);
     let ranges = {'Hour' : 1, 'Day' : 24, 'Week' : 24 * 7, 'Year' : 24 * 365};
     let out = '';
     let prof = '';
